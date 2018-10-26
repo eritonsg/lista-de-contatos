@@ -25,6 +25,7 @@ export class DadosUsuarioComponent implements OnInit {
     if (this._tipo = undefined) {
       this._tipo = this.tipos[0];
     }
+    this._tipo = this.tipos[0];
     const contato = new Contato(this._nome, this._telefone, this._email, this._tipo);
     this.dataBaseService.addContato(contato);
     this.cadastrouContato = !this.cadastrouContato;
