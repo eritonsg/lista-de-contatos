@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { DadosUsuarioComponent } from './dados-usuario/dados-usuario.component';
 import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.component';
 import { DetalhesUsuarioComponent } from './detalhes-usuario/detalhes-usuario.component';
+import { CabecalhoComponent } from './cabecalho/cabecalho.component';
+import { RodapeComponent } from './rodape/rodape.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DadosUsuarioComponent,
     ListaUsuariosComponent,
-    DetalhesUsuarioComponent
+    DetalhesUsuarioComponent,
+    CabecalhoComponent,
+    RodapeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,41 +1,17 @@
-<div class="cabecalho">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="d-flex flex-row">
-          <div class="p-2">
-              <img src="../assets/imgs/capa-ebook.jpg" class="img-capa" alt="e-book: Crie aplicações com Angular: O novo framework do Google">
-          </div>
-          <div class="p-6">
-              <h1>Projeto Lista de contatos com Angular</h1>
-              <h6 class="subtitulo">Projeo final do livro: Crie aplicações com Angular: O novo framework do Google</h6>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<app-cabecalho></app-cabecalho>
 
 <div class="dados-usuario">
-  <div class="container" >
+  <div class="container">
     <div class="row">
-
       <div class="col-4">
         <app-dados-usuario></app-dados-usuario>
       </div>
       <div class="col-8">
-
+        <app-lista-usuarios [exibirLista]="exibirLista" (listaContatoEmitter)="alterarContatoSelecionado($event)"></app-lista-usuarios>
+        <app-detalhes-usuario (exibirDetalheContatoEmitter)="exibirListaContatos($event)" [contato]="contatoSelecionado"></app-detalhes-usuario>
       </div>
     </div>
   </div>
 </div>
 
-<div class="rodape">
-  <div class="container">
-    <footer class="row">
-      <div class="col-12">
-        2018 © Eriton Santos
-      </div>
-    </footer>
-  </div>
-</div>
+<app-rodape></app-rodape>

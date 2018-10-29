@@ -1,25 +1,5 @@
-.img-capa {
-  width: 90px;
-}
-
-.cabecalho {
-  background-color: #F44336;
-  color: #ffffff;
-}
-
-.subtitulo {
-  color: #dcd7d7;
-}
-
 .dados-usuario {
   padding-top: 10px;
   background-color: #ffffff; /* #eaeaea */
   color: #607D8B;
-  height: calc(100vh - 100px);
-}
-
-.rodape {
-  background-color: #795548;
-  text-align: right;
-  color: #ffffff;
 }
