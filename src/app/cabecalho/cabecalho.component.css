@@ -1,0 +1,14 @@
+#cabecalho {
+  height: 150px;
+  background-color: #009688;
+  color: #ffffff;
+}
+
+.img-capa {
+  width: 90px;
+  border: 1px solid;
+}
+
+.subtitulo {
+  color: #f2f2f2;
+}
