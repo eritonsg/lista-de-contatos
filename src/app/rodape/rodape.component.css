@@ -1,0 +1,9 @@
+.rodape {
+  position: relative;
+  bottom: 0px;
+  height: 50px;
+  margin-top: 15px;
+  background-color: #607d8b;
+  text-align: right;
+  color: #ffffff;
+}
