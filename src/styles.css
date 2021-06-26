@@ -39,3 +39,17 @@
   background-color: var(--bs-teal);
   border-color: var(--bs-teal);
 }
+
+/* Estilos do paginador */
+
+.ngx-pagination .current {
+  padding: 0.1875rem 0.625rem;
+  background: var(--primary-color) !important;
+  color: var(--text-white);
+  cursor: pointer;
+}
+
+.ngx-pagination a:hover,
+.ngx-pagination button:hover {
+  background: var(--bg-light-color) !important;
+}

@@ -7,6 +7,8 @@ import { Contato } from './../modelos/contato';
 })
 export class ContatosDataBaseService {
 
+  private MAX_CONTATOS : number = 250;
+
   meusContatos: Contato[] = [
     {'nome': 'Bernardo Leonardo Baptista',
     'telefone': '83983683656',
@@ -37,13 +39,15 @@ export class ContatosDataBaseService {
   contatoEmitter = new EventEmitter();
 
   constructor() {
-    const c1 = new Contato('Bernardo Leonardo Baptista', '83983683656', '', 'Particular');
-    const c2 = new Contato('Bernardo Leonardo Baptista', '83983683656', '', 'Particular');
   }
 
   addContato(contato: Contato): void {
-    this.meusContatos.push(contato);
-    this.contatoEmitter.emit(this.meusContatos);
+    if (this.meusContatos.length < this.MAX_CONTATOS) {
+      this.meusContatos.push(contato);
+      this.contatoEmitter.emit(this.meusContatos);
+    } else {
+      alert('Você excedeu a quantidade máxima (' + this.MAX_CONTATOS + ') de cadastrados permitidos.');
+    }
   }
 
   getContato(id): Contato {

@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { NgxBootstrapIconsModule } from 'ngx-bootstrap-icons';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { checkCircleFill } from 'ngx-bootstrap-icons';
 
@@ -30,12 +31,10 @@ const icons = {
     BrowserModule,
     FormsModule,
     AlertModule.forRoot(),
+    NgxPaginationModule,
     NgxBootstrapIconsModule.pick(icons)
   ],
   providers: [],
-  exports: [
-    AlertModule
-  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

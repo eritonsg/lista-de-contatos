@@ -42,24 +42,28 @@
             <option [value]="item" *ngFor="let item of tipos">{{ item }}</option>
           </select>
         </div>
-        <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Cadastrar</button>
+        <button type="submit" class="btn btn-primary mt-2" [disabled]="form.invalid">Cadastrar</button>
       </form>
     </div>
   </div>
 </div>
 
 <div *ngIf="cadastrouContato">
-  <div class="alert alert-success" role="alert">
-      <h2>Contato cadastrado!</h2>
-  </div>
+  <h3>
+    Cadastrar contato
+  </h3>
   <hr>
   <div class="card card-block">
     <div class="card-body">
-      <p>Nome do Contato: <strong>{{_nome}}</strong></p>
-      <p>Telefone do Contato: <strong>{{_telefone}}</strong></p>
-      <p>Email do Contato: <strong>{{_email}}</strong></p>
-      <p>Tipo do Contato: <strong>{{_tipo}}</strong></p>
+      <p>Nome: <strong>{{_nome}}</strong></p>
+      <p>Telefone: <strong>{{_telefone}}</strong></p>
+      <p>Email: <strong>{{_email}}</strong></p>
+      <p>Tipo: <strong>{{_tipo}}</strong></p>
       <button class="btn btn-primary" (click)="voltar()">Voltar</button>
     </div>
+  </div>
+  <div class="alert alert-success d-flex align-items-center mt-2" role="alert">
+    <i-bs style="margin-top: -3px;" name="check-circle-fill"></i-bs>
+    <span style="margin-left: 5px;">O contato foi cadastrado.</span>    
   </div>
 </div>

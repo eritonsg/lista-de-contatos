@@ -14,6 +14,12 @@ export class ListaUsuariosComponent implements OnInit {
   @Output() listaContatoEmitter = new EventEmitter();
   @Input() exibirLista = true;
 
+  page = 1;
+  size = 8;
+  count = 0;
+  currentIndex = -1;
+  tableSize = 8;
+
   constructor(private databaseService: ContatosDataBaseService) { }
 
   ngOnInit() {
@@ -22,6 +28,17 @@ export class ListaUsuariosComponent implements OnInit {
 
   contatoClidado(item:	number)	{
     this.listaContatoEmitter.emit(item);
+  }
+
+  onTableDataChange(event: any) {
+    this.page = event;
+    this.currentIndex = -1;
+  }
+
+  onTableSizeChange(event: any): void {
+    this.tableSize = event.target.value;
+    this.page = 1;
+    this.currentIndex = -1;
   }
 
 }
