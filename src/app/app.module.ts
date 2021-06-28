@@ -5,7 +5,6 @@ import { NgModule } from '@angular/core';
 import { NgxBootstrapIconsModule } from 'ngx-bootstrap-icons';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { AlertModule } from 'ngx-bootstrap/alert';
-import { checkCircleFill } from 'ngx-bootstrap-icons';
 
 import { AppComponent } from './app.component';
 import { DadosUsuarioComponent } from './dados-usuario/dados-usuario.component';
@@ -13,10 +12,7 @@ import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.componen
 import { DetalhesUsuarioComponent } from './detalhes-usuario/detalhes-usuario.component';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { RodapeComponent } from './rodape/rodape.component';
-
-const icons = {
-  checkCircleFill
-};
+import { IconsModule } from './modulos/icones/icons.module';
 
 @NgModule({
   declarations: [
@@ -32,7 +28,7 @@ const icons = {
     FormsModule,
     AlertModule.forRoot(),
     NgxPaginationModule,
-    NgxBootstrapIconsModule.pick(icons)
+    IconsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
