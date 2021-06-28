@@ -2,9 +2,9 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { NgxBootstrapModule } from './modulos/ngx-bootstrap/ngx-bootstrap.module';
 import { NgxBootstrapIconsModule } from 'ngx-bootstrap-icons';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { AlertModule } from 'ngx-bootstrap/alert';
 
 import { AppComponent } from './app.component';
 import { DadosUsuarioComponent } from './dados-usuario/dados-usuario.component';
@@ -26,7 +26,7 @@ import { IconsModule } from './modulos/icones/icons.module';
   imports: [
     BrowserModule,
     FormsModule,
-    AlertModule.forRoot(),
+    NgxBootstrapModule,
     NgxPaginationModule,
     IconsModule,
   ],
