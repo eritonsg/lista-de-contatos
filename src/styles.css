@@ -112,3 +112,15 @@
 .alert-icon > svg {
   margin-top: -3px;
 }
+
+/* Estilos de Texto */
+
+.title  {
+  color: var(--secondary-color);
+}
+
+/* Estilos para validações */
+
+.invalid-tooltip {
+  right: 0;
+}

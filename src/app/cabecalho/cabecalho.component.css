@@ -1,6 +1,9 @@
 #cabecalho {
   background-color: var(--primary-color);
   color: var(--text-white);
+  width: 100%;
+  margin-bottom: 5px;
+  box-shadow: 0px 5px 5px 1px rgb(0 0 0 / 20%);
 }
 
 .logo {
@@ -16,7 +19,7 @@
 }
 
 .subtitulo {
-  color: var(--secondary-color);
+  color: var(--bg-light);
   font-weight: 600;
   font-size: 1rem;
 }
