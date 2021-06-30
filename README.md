@@ -1,11 +1,20 @@
-# Projeto Lista de contatos usando Angular
-### Desenvolvido após a leitura do livro: Crie aplicações com Angular: O novo framework do Google
+# Projeto Agenda de Contatos com Angular
 
-Obs: O projeto foi redesenhado, contudo os conceitos apresentados no livro foram mantidos.  
-Link para livro: [livro](https://www.casadocodigo.com.br/products/livro-angular)
+### Sobre a aplicação
+Esta aplicação tem o objetivo de gerenciar uma agenda de contatos. Os usuários podem salvar seus contatos, bem como os consultar para obter mais detalhes sobre o contato registrado.
+A aplicação foi desenvolvida após a leitura do livro Crie aplicações com Angular: O novo framework do Google sobre aplicações Angular. A aplicação foi foi redesenhada, contudo os conceitos apresentados no livro foram mantidos.  
 
-Página Inicial  
-![Página inicial](http://i67.tinypic.com/34hhu6c.png)
+Link para o livro: [livro](https://books.google.com.br/books?id=GN7QDgAAQBAJ)
 
-Página de detalhe  
-![](http://i63.tinypic.com/2s00ec0.png)
+### Imagens da Aplicação
+
+|                      Agenda de Contatos                      |
+| :----------------------------------------------------------: |
+| <img src="https://images2.imgbox.com/30/1e/UdkwFveG_o.gif" width="100%"> |
+
+
+
+|                        Página Inicial                        |                      Página de Cadastro                      |                      Página de Detalhes                      |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| <img src="https://images2.imgbox.com/a7/3d/wgs6LjTF_o.png" width="100%"> | <img src="https://images2.imgbox.com/16/6f/aXlnxuEs_o.png" width="100%"> | <img src="https://images2.imgbox.com/16/82/xUTVKdNq_o.png" width="100%"> |
+
