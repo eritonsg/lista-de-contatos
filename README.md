@@ -10,7 +10,7 @@ Link para o livro: [livro](https://books.google.com.br/books?id=GN7QDgAAQBAJ)
 
 |                      Agenda de Contatos                      |
 | :----------------------------------------------------------: |
-| <img src="https://images2.imgbox.com/30/1e/UdkwFveG_o.gif" width="100%"> |
+| ![](https://images2.imgbox.com/30/1e/UdkwFveG_o.gif) |
 
 
 
