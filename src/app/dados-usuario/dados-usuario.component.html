@@ -34,15 +34,14 @@
           <label for="email">E-mail:</label>
           <input type="email" class="form-control" name="email" id="email" [(ngModel)]="_email" #email="ngModel"
             placeholder="email@provedor.com">
-
-
         </div>
-        <div class="form-group">
-          <label for="tipo">Tipo:</label>
-          <select class="form-control" name="tipo" id="tipo" [(ngModel)]="_tipo" #tipoContato="ngModel">
-            <option [value]="item" *ngFor="let item of tipos">{{ item }}</option>
-          </select>
+        
+        <div class="form-group mb-3">
+          <label for="tipo">Tipo:</label>          
+          <ngx-select name="tipo" id="tipo" #tipoContato="ngModel" [size]="'small'" [allowClear]="false" [items]="tipos" [(ngModel)]="_tipo" optionValueField="id" [placeholder]="'Selecione'" required >
+          </ngx-select>
         </div>
+
         <button type="submit" class="btn btn-primary mt-2" [disabled]="form.invalid">Cadastrar</button>
       </form>
     </div>

@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { NgxBootstrapModule } from './modulos/ngx-bootstrap/ngx-bootstrap.module';
-import { NgxBootstrapIconsModule } from 'ngx-bootstrap-icons';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { NgxSelectModule } from 'ngx-select-ex';
 
 import { AppComponent } from './app.component';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
@@ -29,6 +29,7 @@ import { IconsModule } from './modulos/icones/icons.module';
     FormsModule,
     NgxBootstrapModule,
     NgxPaginationModule,
+    NgxSelectModule,
     IconsModule,
   ],
   exports: [
