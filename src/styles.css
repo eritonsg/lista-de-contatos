@@ -124,3 +124,8 @@
 .invalid-tooltip {
   right: 0;
 }
+
+/* Estilos para mensagens de alerta */
+.alert {
+  margin: 0 !important;
+}

@@ -1,5 +1,9 @@
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
+
+import { AlertComponent } from 'ngx-bootstrap/alert';
+
 import { ContatosDataBaseService } from './../servicos/contatos-data-base.service';
-import { Component, OnInit } from '@angular/core';
 import { Contato } from '../modelos/contato';
 
 @Component({
@@ -9,34 +13,40 @@ import { Contato } from '../modelos/contato';
 })
 export class DadosUsuarioComponent implements OnInit {
 
+  
+  @ViewChild('frmCadastro')
+  private frmCadastro: NgForm;
+  
+  ultimoId: number = 96;
+  _contato: Contato;
   cadastrouContato =	false;
-  _nome: string;
-  _telefone: string;
-  _email: string;
-  _tipo: string;
-  tipos: string	[]	=	['Particular',	'Trabalho',	'Amigos',	'Família'];
+  tipos: string	[]	=	['Principal',	'Celular', 'Casa', 'Trabalho', 'Fax'];
 
   constructor(private	dataBaseService:	ContatosDataBaseService)	{}
 
   ngOnInit() {
+    this.novoContato();
   }
 
-  enviarDados(): void {
-    if (this._tipo = undefined) {
-      this._tipo = this.tipos[0];
-    }
-    this._tipo = this.tipos[0];
-    const contato = new Contato(this._nome, this._telefone, this._email, this._tipo);
-    this.dataBaseService.addContato(contato);
-    this.cadastrouContato = !this.cadastrouContato;
+  salvar(form: NgForm): void {
+    this.ultimoId = this.ultimoId + 50;
+    this._contato.id = this.ultimoId;
+    this.dataBaseService.addContato(this._contato);
+    this.cadastrouContato = true;
+    this.novoContato();
+    this.novoFormulario(form);
   }
 
-  voltar()	{
-    this._nome	=	'';
-    this._telefone	=	'';
-    this._email	=	'';
-    this._tipo	=	'';
-    this.cadastrouContato	=	!this.cadastrouContato;
+  novoContato(): void {
+    this._contato = new Contato(0, '','','','');
+  }
+ 
+  onClosed(dismissedAlert: AlertComponent): void {
+    this.cadastrouContato = false;
+  }
+
+  novoFormulario(form: NgForm): void {
+    form.resetForm();
   }
 
 }

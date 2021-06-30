@@ -15,10 +15,10 @@ export class ListaUsuariosComponent implements OnInit {
   @Input() exibirLista = true;
 
   page = 1;
-  size = 8;
+  size = 9;
   count = 0;
   currentIndex = -1;
-  tableSize = 8;
+  tableSize = 9;
 
   constructor(private databaseService: ContatosDataBaseService) { }
 
@@ -26,8 +26,8 @@ export class ListaUsuariosComponent implements OnInit {
     this.contatos = this.databaseService.getContatos();
   }
 
-  contatoClidado(item:	number)	{
-    this.listaContatoEmitter.emit(item);
+  contatoClidado(id: number)	{
+    this.listaContatoEmitter.emit(id);
   }
 
   onTableDataChange(event: any) {

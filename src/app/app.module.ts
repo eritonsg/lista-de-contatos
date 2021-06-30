@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { NgxBootstrapModule } from './modulos/ngx-bootstrap/ngx-bootstrap.module';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { NgxSelectModule } from 'ngx-select-ex';
+import { NgxMaskModule, IConfig } from 'ngx-mask'
 
 import { AppComponent } from './app.component';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
@@ -14,6 +15,8 @@ import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.componen
 import { DetalhesUsuarioComponent } from './detalhes-usuario/detalhes-usuario.component';
 import { IconsModule } from './modulos/icones/icons.module';
 
+
+export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
 @NgModule({
   declarations: [
@@ -31,6 +34,7 @@ import { IconsModule } from './modulos/icones/icons.module';
     NgxPaginationModule,
     NgxSelectModule,
     IconsModule,
+    NgxMaskModule.forRoot()
   ],
   exports: [
     IconsModule

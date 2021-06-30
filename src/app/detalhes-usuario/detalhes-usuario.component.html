@@ -8,7 +8,7 @@
       <div class="card-body">
         <p><strong>Nome: </strong> {{ contato?.nome }}</p>
         <p><strong>Email: </strong> {{ contato?.email }} </p>
-        <p><strong>Telefone: </strong> {{ contato?.telefone }}</p>
+        <p><strong>Telefone: </strong> {{ contato?.telefone | mask: "(00) 00000-0000" }}</p>
         <p><strong>Tipo: </strong>{{ contato?.tipo }} </p>
         <button class="btn btn-primary" (click)="voltar()" >Voltar</button>
       </div>
