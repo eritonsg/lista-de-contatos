@@ -7,7 +7,7 @@ A aplicação foi desenvolvida após a leitura do livro Crie aplicações com An
 Link para acessar a aplicação: [Agenda-de-Contatos](https://agendadecontatos.netlify.app/)
 
 
-## Stack of Development
+## Stack
 
 - JavaScript (ECMAScript)
 - TypeScript (version 4.2.3)
@@ -30,12 +30,12 @@ Link para acessar a aplicação: [Agenda-de-Contatos](https://agendadecontatos.n
 | <img src="https://images2.imgbox.com/a7/3d/wgs6LjTF_o.png" width="100%"> | <img src="https://images2.imgbox.com/16/6f/aXlnxuEs_o.png" width="100%"> | <img src="https://images2.imgbox.com/16/82/xUTVKdNq_o.png" width="100%"> |
 
 
-## Run this web app on localhost
+## Rode esta aplicação em localhost
 
-Run `ng serve --open` in a command line terminal for a dev server.
-The app will automatically open on your default brownser at `http://localhost:4200/`.
-If you have changed any of the source files, the server apply it automatically and reload the dev server.
+Execute `ng serve --open` no terminal de linha de comando para iniciar um servidor no ambiente de desenvolvimento.
+A aplicação irá automaticamente ser aberta no seu navegador em `http://localhost:4200/`.
+Se você alterar o código-fonte, o servidor irá automaticamente atualizar a aplicação e aplicar as novas alterações.
 
-## Further help
+## Mais informações sobre Angular CLI
 
-To get more help on the Angular CLI use `ng help` in a command line terminal or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Para mais informações sobre Angular CLI execute `ng help` no terminal de linha de comando ou acesse [Angular CLI](https://angular.io/cli).
