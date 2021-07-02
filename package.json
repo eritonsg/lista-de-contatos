@@ -1,5 +1,18 @@
 {
-  "name": "lista-de-contatos",
+  "name": "agenda-de-contatos",
+  "version": "1.0.0",
+  "description": "Esta é uma aplicação para gerenciar uma agenda de contatos.",
+  "keywords": [],
+  "author": "Eriton dos Santos Gomes <dev.eritonsg@gmail.com> (https://github.com/eritonsg)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eritonsg/lista-de-contatos"
+  },
+  "bugs": {
+    "url": "https://github.com/eritonsg/lista-de-contatos"
+  },
+  "homepage": "https://github.com/eritonsg/lista-de-contatos",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

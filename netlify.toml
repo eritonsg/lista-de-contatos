@@ -1,0 +1,7 @@
+[build]
+  publish = "dist/agenda-de-contatos"
+  command = "ng build agenda-de-contatos --configuration production"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
