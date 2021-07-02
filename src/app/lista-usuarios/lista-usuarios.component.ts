@@ -14,14 +14,44 @@ export class ListaUsuariosComponent implements OnInit {
   @Output() listaContatoEmitter = new EventEmitter();
   @Input() exibirLista = true;
 
+  page = 1;
+  size = 9;
+  count = 0;
+  currentIndex = -1;
+  tableSize = 9;
+
   constructor(private databaseService: ContatosDataBaseService) { }
 
   ngOnInit() {
     this.contatos = this.databaseService.getContatos();
+    this.renovaLista();
   }
 
-  contatoClidado(item:	number)	{
-    this.listaContatoEmitter.emit(item);
+  private renovaLista(): void {
+    let novaLista = setInterval(
+     () => { 
+       this.novaListaDeContatos();
+      } , 8640000000);
+  }
+
+  private novaListaDeContatos() {
+    this.databaseService.renovaListaDeContatos();
+    this.contatos = this.databaseService.getContatos();
+  }
+
+  contatoClidado(id: number)	{
+    this.listaContatoEmitter.emit(id);
+  }
+
+  onTableDataChange(event: any) {
+    this.page = event;
+    this.currentIndex = -1;
+  }
+
+  onTableSizeChange(event: any): void {
+    this.tableSize = event.target.value;
+    this.page = 1;
+    this.currentIndex = -1;
   }
 
 }

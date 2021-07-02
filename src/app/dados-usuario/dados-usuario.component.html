@@ -1,15 +1,16 @@
-<div *ngIf="!cadastrouContato">
-  <h3>
-    Cadastrar contato
+  <h3 class="title">
+    <i-bs class="title-icon" name="person-plus-fill"></i-bs>
+    Cadastro de contato
   </h3>
   <hr>
 
   <div class="card">
     <div class="card-body">
-      <form class="card-block" name="form" #form="ngForm" (ngSubmit)="enviarDados()">
-        <div class="form-group" [class.has-success]="nome.valid" [class.has-danger]="nome.invalid">
+      <form class="card-block" #frmCadastro="ngForm" (ngSubmit)="salvar(frmCadastro)">
+
+        <div class="form-group mb-3" [class.has-success]="nome.valid" [class.has-danger]="nome.invalid">
           <label for="nome">Nome:</label>
-          <input type="text" name="nome" [(ngModel)]="_nome" #nome="ngModel" class="form-control" placeholder="Seu nome"
+          <input type="text" name="nome" [(ngModel)]="_contato.nome" #nome="ngModel" class="form-control" placeholder="Nome do contato"
             required>
 
           <div [hidden]="nome.valid	||	nome.pristine">
@@ -18,10 +19,11 @@
               O nome é um campo obrigatório!</small>
           </div>
         </div>
-        <div class="form-group" [class.has-success]="telefone.valid" [class.has-danger]="telefone.invalid">
+
+        <div class="form-group mb-3" [class.has-success]="telefone.valid" [class.has-danger]="telefone.invalid">
           <label for="telefone">Telefone:</label>
-          <input type="text" name="telefone" id="telefone" [(ngModel)]="_telefone" #telefone="ngModel"
-            [class.form-control-success]="nome.valid" class="form-control" placeholder="(99)-9999-9999" required>
+          <input type="text" name="telefone" id="telefone" [(ngModel)]="_contato.telefone" #telefone="ngModel"
+            [class.form-control-success]="nome.valid" class="form-control" placeholder="(99) 99999-9999" required>
 
           <div [hidden]="telefone.valid	||	telefone.pristine">
             <small [ngClass]="{'form-control-danger':	'telefone.invalid	||	telefone.drity',
@@ -29,37 +31,28 @@
               O telefone é uma campo obrigatório! </small>
           </div>
         </div>
-        <div class="form-group">
+
+        <div class="form-group mb-3">
           <label for="email">E-mail:</label>
-          <input type="email" class="form-control" name="email" id="email" [(ngModel)]="_email" #email="ngModel"
+          <input type="email" class="form-control" name="email" id="email" [(ngModel)]="_contato.email" #email="ngModel"
             placeholder="email@provedor.com">
-
-
         </div>
-        <div class="form-group">
-          <label for="tipo">Tipo:</label>
-          <select class="form-control" name="tipo" id="tipo" [(ngModel)]="_tipo" #tipoContato="ngModel">
-            <option [value]="item" *ngFor="let item of tipos">{{ item }}</option>
-          </select>
+
+        <div class="form-group mb-3">
+          <label for="tipo">Tipo:</label>          
+          <ngx-select name="tipo" id="tipo" #tipoContato="ngModel" [size]="'small'" [allowClear]="false" [items]="tipos" [(ngModel)]="_contato.tipo" optionValueField="id" [placeholder]="'Selecione'" required >
+          </ngx-select>
         </div>
-        <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Cadastrar</button>
+
+        <button type="submit" class="btn btn-primary" [disabled]="frmCadastro.invalid">Cadastrar</button>
       </form>
+      
+      <div *ngIf="cadastrouContato" class="mt-3">
+        <alert [type]="'success'" [dismissOnTimeout]="5000" #alertSuccess (onClosed)="onClosed(alertSuccess)">
+          <i-bs class="alert-icon" name="check-circle-fill"></i-bs>
+          <span style="margin-left: 5px;">O contato foi cadastrado.</span>    
+        </alert>
+      </div>
+      
     </div>
   </div>
-</div>
-
-<div *ngIf="cadastrouContato">
-  <div class="alert alert-success" role="alert">
-      <h2>Contato cadastrado!</h2>
-  </div>
-  <hr>
-  <div class="card card-block">
-    <div class="card-body">
-      <p>Nome do Contato: <strong>{{_nome}}</strong></p>
-      <p>Telefone do Contato: <strong>{{_telefone}}</strong></p>
-      <p>Email do Contato: <strong>{{_email}}</strong></p>
-      <p>Tipo do Contato: <strong>{{_tipo}}</strong></p>
-      <button class="btn btn-primary" (click)="voltar()">Voltar</button>
-    </div>
-  </div>
-</div>

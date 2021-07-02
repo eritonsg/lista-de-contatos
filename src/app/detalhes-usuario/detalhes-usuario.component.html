@@ -1,13 +1,15 @@
 <section *ngIf="contato" >
-  <h3>Detalhes do contato</h3>
+  <h3 class="title">
+    <i-bs class="title-icon" name="person-fill"></i-bs>
+    Detalhes do contato</h3>
   <hr>
 
   <div class="card card-block">
       <div class="card-body">
-        <p><strong>Nome do Contato: </strong> {{ contato?.nome }}</p>
-        <p><strong>Telefone do Contato: </strong> {{ contato?.telefone }}</p>
-        <p><strong>Email do Contato: </strong> {{ contato?.email }} </p>
-        <p><strong>Tipo do Contato: </strong>{{ contato?.tipo }} </p>
+        <p><strong>Nome: </strong> {{ contato?.nome }}</p>
+        <p><strong>Email: </strong> {{ contato?.email }} </p>
+        <p><strong>Telefone: </strong> {{ contato?.telefone | mask: "(00) 00000-0000" }}</p>
+        <p><strong>Tipo: </strong>{{ contato?.tipo }} </p>
         <button class="btn btn-primary" (click)="voltar()" >Voltar</button>
       </div>
   </div>

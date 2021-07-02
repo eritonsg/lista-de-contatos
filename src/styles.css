@@ -1,21 +1,131 @@
-.btn-primary {
-  color:#fff;
-  background-color: #009688;
-  border-color:#009688
+:root {
+  --bg-color: #dee2e6;
+  --bg-light-color: #f8f9fa;
+  --primary-color: #20c997;
+  --primary-dark-color: #008e76;
+  --secondary-color: #607d8b;
+  --text-color: #41464b;
+  --text-white: #fff;
 }
 
+/* Estilos dos botões */
+
+/*Btn Primary*/
+
+.btn-primary {
+  color:var(--text-white);
+  background-color: var(--primary-color);
+  border-color:var(--primary-color);
+}
+
+/* hover */
+
 .btn-primary:hover {
-  color:#fff;
-  background-color:rgba(0, 144, 131, 1);
-  border-color:rgba(0, 144, 131, 1)
+  color: var(--text-white);
+  background-color: var(--primary-dark-color);
+  border-color: var(--primary-dark-color);
 }
-.btn-primary.focus,.btn-primary:focus {
-  box-shadow:0 0 0 .2rem rgba(0, 144, 131, 1)
+
+/* focus */
+
+.btn-check:focus+.btn-primary,
+.btn-primary:focus {
+  color: var(--text-white);
+  background-color: var(--primary-dark-color);
+  border-color: var(--primary-dark-color);
+  box-shadow: 0 0 0 0.25rem rgb(32 201 151 / 50%) !important;
 }
+
+/* active */
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+  color: var(--text-white);
+  background-color: var(--primary-dark-color);
+  border-color: var(--primary-dark-color);
+}
+
+/* active + focus*/
+
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgb(32 201 151 / 50%);
+}
+
+/* active + hover + focus*/
+
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem rgb(32 201 151 / 50%);
+}
+
+/* active + focus + target */
+
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem rgb(32 201 151 / 50%);
+}
+
 .btn-primary.disabled,.btn-primary:disabled {
-  color:#fff;
-  background-color:#009688;
-  border-color:#009688
+  color:var(--text-white);
+  background-color:var(--primary-color);
+  border-color:var(--primary-color);
 }
-.btn-primary:not(:disabled):not(.disabled).active,.btn-primary:not(:disabled):not(.disabled):active,.show>.btn-primary.dropdown-toggle{color:#fff;background-color: #009688;border-color:#009688}
-.btn-primary:not(:disabled):not(.disabled).active:focus,.btn-primary:not(:disabled):not(.disabled):active:focus,.show>.btn-primary.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(0, 144, 131, 1)}
+
+.btn-primary:not(:disabled):not(.disabled).active,.btn-primary:not(:disabled):not(.disabled):active,.show>.btn-primary.dropdown-toggle{color:var(--text-white);background-color: var(--primary-color);border-color:var(--primary-color);}
+.btn-primary:not(:disabled):not(.disabled).active:focus,.btn-primary:not(:disabled):not(.disabled):active:focus,.show>.btn-primary.dropdown-toggle:focus{box-shadow:0 0 0 .2rem var(--primary-color);}
+
+/* Estilos do Alert */
+
+.alert-success {
+  color: var(--bg-light-color);
+  background-color: var(--bs-teal);
+  border-color: var(--bs-teal);
+}
+
+/* Estilos do paginador */
+
+.ngx-pagination .current {
+  padding: 0.1875rem 0.625rem;
+  background: var(--primary-color) !important;
+  color: var(--text-white);
+  cursor: pointer;
+}
+
+.ngx-pagination a:hover,
+.ngx-pagination button:hover {
+  background: #0000000d !important;
+}
+
+/* Estilos dos ícones */
+
+.title-icon > svg {
+  width: 2rem !important;
+  height: 2rem !important;
+  margin-top: -8px;
+}
+
+.alert-icon > svg {
+  margin-top: -3px;
+}
+
+/* Estilos de Texto */
+
+.title  {
+  color: var(--secondary-color);
+}
+
+/* Estilos para validações */
+
+.invalid-tooltip {
+  right: 0;
+}
+
+/* Estilos para mensagens de alerta */
+.alert {
+  margin: 0 !important;
+}

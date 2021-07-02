@@ -1,17 +1,23 @@
-<app-cabecalho></app-cabecalho>
+<div class="d-flex flex-column" style="height: calc(100vh);">
 
-<div class="dados-usuario">
-  <div class="container">
-    <div class="row">
-      <div class="col-4">
-        <app-dados-usuario></app-dados-usuario>
-      </div>
-      <div class="col-8">
-        <app-lista-usuarios [exibirLista]="exibirLista" (listaContatoEmitter)="alterarContatoSelecionado($event)"></app-lista-usuarios>
-        <app-detalhes-usuario (exibirDetalheContatoEmitter)="exibirListaContatos($event)" [contato]="contatoSelecionado"></app-detalhes-usuario>
+  <app-cabecalho></app-cabecalho>
+
+  <main>
+    <div class="container">
+      <div class="row pt-2">
+        <div class="col-12 col-sm-4 pt-4">
+          <app-dados-usuario></app-dados-usuario>
+        </div>
+        <div class="col-12 col-sm-8 pt-4">
+          <app-lista-usuarios [exibirLista]="exibirLista" (listaContatoEmitter)="alterarContatoSelecionado($event)"></app-lista-usuarios>
+          <app-detalhes-usuario (exibirDetalheContatoEmitter)="exibirListaContatos($event)" [contato]="contatoSelecionado"></app-detalhes-usuario>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
+  
+  <footer class="footer mt-auto">
+    <app-rodape></app-rodape>
+  </footer>
+  
 </div>
-
-<app-rodape></app-rodape>
