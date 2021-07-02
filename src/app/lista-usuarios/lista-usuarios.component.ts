@@ -24,6 +24,19 @@ export class ListaUsuariosComponent implements OnInit {
 
   ngOnInit() {
     this.contatos = this.databaseService.getContatos();
+    this.renovaLista();
+  }
+
+  private renovaLista(): void {
+    let novaLista = setInterval(
+     () => { 
+       this.novaListaDeContatos();
+      } , 8640000000);
+  }
+
+  private novaListaDeContatos() {
+    this.databaseService.renovaListaDeContatos();
+    this.contatos = this.databaseService.getContatos();
   }
 
   contatoClidado(id: number)	{
