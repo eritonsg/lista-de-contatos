@@ -31,7 +31,7 @@ export class ListaUsuariosComponent implements OnInit {
     let novaLista = setInterval(
      () => { 
        this.novaListaDeContatos();
-      } , 8640000000);
+      } , 3600000);
   }
 
   private novaListaDeContatos() {
