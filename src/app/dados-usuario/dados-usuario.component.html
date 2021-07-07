@@ -10,7 +10,7 @@
 
         <div class="form-group mb-3" [class.has-success]="nome.valid" [class.has-danger]="nome.invalid">
           <label for="nome">Nome:</label>
-          <input type="text" name="nome" [(ngModel)]="_contato.nome" #nome="ngModel" class="form-control" placeholder="Nome do contato"
+          <input type="text" name="nome" [(ngModel)]="_contato.nome" #nome="ngModel" class="form-control form-control-sm" placeholder="Nome do contato"
             required>
 
           <div [hidden]="nome.valid	||	nome.pristine">
@@ -23,7 +23,7 @@
         <div class="form-group mb-3" [class.has-success]="telefone.valid" [class.has-danger]="telefone.invalid">
           <label for="telefone">Telefone:</label>
           <input type="text" name="telefone" id="telefone" [(ngModel)]="_contato.telefone" #telefone="ngModel"
-            [class.form-control-success]="nome.valid" class="form-control" placeholder="(99) 99999-9999" required>
+            [class.form-control-success]="nome.valid" class="form-control form-control-sm" placeholder="(99) 99999-9999" required>
 
           <div [hidden]="telefone.valid	||	telefone.pristine">
             <small [ngClass]="{'form-control-danger':	'telefone.invalid	||	telefone.drity',
@@ -34,7 +34,7 @@
 
         <div class="form-group mb-3">
           <label for="email">E-mail:</label>
-          <input type="email" class="form-control" name="email" id="email" [(ngModel)]="_contato.email" #email="ngModel"
+          <input type="email" class="form-control form-control-sm" name="email" id="email" [(ngModel)]="_contato.email" #email="ngModel"
             placeholder="email@provedor.com">
         </div>
 
