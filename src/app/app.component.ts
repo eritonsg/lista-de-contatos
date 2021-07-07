@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  title = 'ListaDeContatos';
+  title = 'Agenda de Contatos';
   contatoSelecionado: Contato;
   exibirLista = true;
 
